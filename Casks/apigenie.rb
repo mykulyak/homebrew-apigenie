@@ -4,7 +4,7 @@ cask "apigenie" do
 
   url "https://apigenie.pl/dist/#{version}/apigenie-#{version}-macos_14-arm64"
   name "apigenie"
-  desc "The best software for OpenAPI development"
+  desc "Best software for OpenAPI development"
   homepage "https://apigenie.pl/"
 
   livecheck do
