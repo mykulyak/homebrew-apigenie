@@ -4,7 +4,7 @@ cask "apigenie" do
 
   # url "https://apigenie.pl/dist/#{version}/apigenie-#{version}-macos_14-arm64.zip"
   url "https://storage.googleapis.com/apigenie.pl/dist/#{version}/apigenie-#{version}-macos_14-arm64.zip",
-    verified: "storage.googleapis.com/apigenie.pl/"
+      verified: "storage.googleapis.com/apigenie.pl/"
   name "apigenie"
   desc "Best software for OpenAPI development"
   homepage "https://apigenie.pl/"
