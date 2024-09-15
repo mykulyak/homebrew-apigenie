@@ -1,8 +1,8 @@
 cask "apigenie" do
   version "0.8.0"
-  sha256 "f4b343b6c2a08ecfa3754f209481a55dfc3209bac4d51226c4c7785e22164154"
+  sha256 "b28953aa12ada9ab49788c396571a964d2bd5b369492ec20c9a8fcd052b9082b"
 
-  url "https://apigenie.pl/dist/#{version}/apigenie-#{version}-macos_14-arm64"
+  url "https://apigenie.pl/dist/#{version}/apigenie-#{version}-macos_14-arm64.zip"
   name "apigenie"
   desc "Best software for OpenAPI development"
   homepage "https://apigenie.pl/"
@@ -14,7 +14,7 @@ cask "apigenie" do
 
   depends_on macos: ">= :sonoma"
 
-  app "API Genie.app"
+  binary "apigenie-#{version}-macos_14-arm64"
 
   # zap trash: ""
 end
