@@ -14,7 +14,5 @@ cask "apigenie" do
 
   depends_on macos: ">= :sonoma"
 
-  binary "apigenie-#{version}-macos_14-arm64"
-
-  # zap trash: ""
+  binary "apigenie-#{version}-macos_14-arm64", target: "apigenie"
 end
