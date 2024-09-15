@@ -1,6 +1,6 @@
 cask "apigenie" do
   version "0.8.0"
-  sha256 "b28953aa12ada9ab49788c396571a964d2bd5b369492ec20c9a8fcd052b9082b"
+  sha256 "c95782d5d20ed1a631abf0505d8bd04906685e825244cd645f91dc18e00b499e"
 
   url "https://apigenie.pl/dist/#{version}/apigenie-#{version}-macos_14-arm64.zip"
   name "apigenie"
