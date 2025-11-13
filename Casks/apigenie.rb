@@ -1,9 +1,9 @@
 cask "apigenie" do
-  version "0.8.0"
-  sha256 "c95782d5d20ed1a631abf0505d8bd04906685e825244cd645f91dc18e00b499e"
+  version "0.8.2"
+  sha256 "077c04cf1ed1dc484efa3cecf81cf99b6cf84eb97a6c37bca4fe5d0fb0912c62"
 
   # url "https://apigenie.pl/dist/#{version}/apigenie-#{version}-macos_14-arm64.zip"
-  url "https://storage.googleapis.com/apigenie.pl/dist/#{version}/apigenie-#{version}-macos_14-arm64.zip",
+  url "https://storage.googleapis.com/apigenie.pl/dist/#{version}/apigenie-#{version}-macos_15-arm64.zip",
       verified: "storage.googleapis.com/apigenie.pl/"
   name "apigenie"
   desc "Best software for OpenAPI development"
@@ -16,5 +16,5 @@ cask "apigenie" do
 
   depends_on macos: ">= :sonoma"
 
-  binary "apigenie-#{version}-macos_14-arm64", target: "apigenie"
+  binary "apigenie-#{version}-macos_15-arm64", target: "apigenie"
 end
