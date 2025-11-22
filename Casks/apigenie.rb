@@ -1,6 +1,6 @@
 cask "apigenie" do
-  version "0.8.2"
-  sha256 "bf5a4d59ce87617745b2967d96ddcd0534338824039e9bfd34fb99b3c8df0a15"
+  version "0.8.3"
+  sha256 "4b7b4ba4d739497f55e6c3c0b3458178acdd6e9c8d2b8dd21b37b4fcfe220393"
 
   url "https://storage.googleapis.com/apigenie.pl/dist/#{version}/apigenie-#{version}-macos15-arm64.zip",
       verified: "storage.googleapis.com/apigenie.pl/"
