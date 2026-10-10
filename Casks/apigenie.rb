@@ -8,6 +8,8 @@ cask "apigenie" do
   desc "Best software for OpenAPI development"
   homepage "https://apigenie.pl/"
 
+  deprecate! date: "2026-10-10", because: "is replaced by the apigenie formula"
+
   livecheck do
     url :url
     strategy :header_match
