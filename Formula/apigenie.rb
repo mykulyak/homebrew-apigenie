@@ -10,15 +10,19 @@ class Apigenie < Formula
     depends_on arch: :arm64
     depends_on macos: :sonoma
 
-    url "https://github.com/mykulyak/api-genie/releases/download/cli-0.9.0/apigenie-0.9.0-macos-arm64.zip"
-    sha256 "fea319444b61aabd08f15ff754fb0ec7b0dcdf30c1e4f8f4c69815159d1a798c"
+    on_arm do
+      url "https://github.com/mykulyak/api-genie/releases/download/cli-0.9.0/apigenie-0.9.0-macos-arm64.zip"
+      sha256 "fea319444b61aabd08f15ff754fb0ec7b0dcdf30c1e4f8f4c69815159d1a798c"
+    end
   end
 
   on_linux do
     depends_on arch: :x86_64
 
-    url "https://github.com/mykulyak/api-genie/releases/download/cli-0.9.0/apigenie-0.9.0-linux-x64.tar.gz"
-    sha256 "c538afef40655458799ee9a638b76323689ed3041984e22ae205ed06a96f51f1"
+    on_intel do
+      url "https://github.com/mykulyak/api-genie/releases/download/cli-0.9.0/apigenie-0.9.0-linux-x64.tar.gz"
+      sha256 "c538afef40655458799ee9a638b76323689ed3041984e22ae205ed06a96f51f1"
+    end
   end
 
   def install
