@@ -3,7 +3,12 @@
 class Apigenie < Formula
   desc "Tools for OpenAPI development, with code generators and a mock server"
   homepage "https://apigenie.pl"
+  # Linux x86_64; the macOS block below overrides it on Apple silicon, and the depends_on lines
+  # keep the formula off the systems without a binary (every system needs some url for
+  # `brew readall --os=all --arch=all`)
+  url "https://github.com/mykulyak/api-genie/releases/download/cli-0.9.0/apigenie-0.9.0-linux-x64.tar.gz"
   version "0.9.0"
+  sha256 "c538afef40655458799ee9a638b76323689ed3041984e22ae205ed06a96f51f1"
   license "MIT"
 
   on_macos do
@@ -18,11 +23,6 @@ class Apigenie < Formula
 
   on_linux do
     depends_on arch: :x86_64
-
-    on_intel do
-      url "https://github.com/mykulyak/api-genie/releases/download/cli-0.9.0/apigenie-0.9.0-linux-x64.tar.gz"
-      sha256 "c538afef40655458799ee9a638b76323689ed3041984e22ae205ed06a96f51f1"
-    end
   end
 
   def install
