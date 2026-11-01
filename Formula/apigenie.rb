@@ -6,9 +6,9 @@ class Apigenie < Formula
   # Linux x86_64; the macOS block below overrides it on Apple silicon, and the depends_on lines
   # keep the formula off the systems without a binary (every system needs some url for
   # `brew readall --os=all --arch=all`, and brew style wants url, version, sha256 in this order)
-  url "https://github.com/mykulyak/api-genie/releases/download/cli-0.10.0/apigenie-0.10.0-linux-x64.tar.gz"
-  version "0.10.0"
-  sha256 "555c290c418e989cbdf88961ed9cc04c18689a9d103aa0cabb5be61ad00dc553"
+  url "https://github.com/mykulyak/api-genie/releases/download/cli-0.11.0/apigenie-0.11.0-linux-x64.tar.gz"
+  version "0.11.0"
+  sha256 "fe8b8197d923079afdd49fa4f50f729e77f95e394f9b8e7484ca85ff351e7417"
   license "MIT"
 
   on_macos do
@@ -16,8 +16,8 @@ class Apigenie < Formula
     depends_on macos: :sonoma
 
     on_arm do
-      url "https://github.com/mykulyak/api-genie/releases/download/cli-0.10.0/apigenie-0.10.0-macos-arm64.zip"
-      sha256 "786ab51a2744d76de5953b3127908b8d7a24bfaf5571ec0073763ceef77682e0"
+      url "https://github.com/mykulyak/api-genie/releases/download/cli-0.11.0/apigenie-0.11.0-macos-arm64.zip"
+      sha256 "890b44834cabf7a1f335912b9af5638fee609e20e6313af934d116e44c8276a6"
     end
   end
 
@@ -27,8 +27,6 @@ class Apigenie < Formula
 
   def install
     bin.install "apigenie", "apigenie-generator", "apigenie-server", "apigenie-catalog"
-    # the deprecated name of apigenie-server, until 1.1
-    bin.install_symlink "apigenie-server" => "apigenie-mock"
   end
 
   test do
@@ -36,7 +34,6 @@ class Apigenie < Formula
     assert_equal version.to_s, shell_output("#{bin}/apigenie --version").lines.first.strip
     assert_equal version.to_s, shell_output("#{bin}/apigenie-generator --version").lines.first.strip
     assert_equal version.to_s, shell_output("#{bin}/apigenie-server --version").lines.first.strip
-    assert_equal version.to_s, shell_output("#{bin}/apigenie-mock --version").lines.first.strip
     assert_equal version.to_s, shell_output("#{bin}/apigenie-catalog --version").lines.first.strip
   end
 end
