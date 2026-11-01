@@ -6,9 +6,9 @@ class Apigenie < Formula
   # Linux x86_64; the macOS block below overrides it on Apple silicon, and the depends_on lines
   # keep the formula off the systems without a binary (every system needs some url for
   # `brew readall --os=all --arch=all`, and brew style wants url, version, sha256 in this order)
-  url "https://github.com/mykulyak/api-genie/releases/download/cli-0.11.0/apigenie-0.11.0-linux-x64.tar.gz"
-  version "0.11.0"
-  sha256 "fe8b8197d923079afdd49fa4f50f729e77f95e394f9b8e7484ca85ff351e7417"
+  url "https://github.com/mykulyak/api-genie/releases/download/cli-0.11.1/apigenie-0.11.1-linux-x64.tar.gz"
+  version "0.11.1"
+  sha256 "a8c8f27e7dc84b89e0fe94482b83c0d668a545ba30a709d97e1cbc32965ab7fd"
   license "MIT"
 
   on_macos do
@@ -16,8 +16,8 @@ class Apigenie < Formula
     depends_on macos: :sonoma
 
     on_arm do
-      url "https://github.com/mykulyak/api-genie/releases/download/cli-0.11.0/apigenie-0.11.0-macos-arm64.zip"
-      sha256 "890b44834cabf7a1f335912b9af5638fee609e20e6313af934d116e44c8276a6"
+      url "https://github.com/mykulyak/api-genie/releases/download/cli-0.11.1/apigenie-0.11.1-macos-arm64.zip"
+      sha256 "76bf7fc17ae2005fdbf20ab4bf959bc669b86c1fab683af6cf1c1b5f99a7feb0"
     end
   end
 
