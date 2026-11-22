@@ -2,22 +2,22 @@
 # (`npm run release -- publish cli`, see docs/releasing.md) fills in the @...@ placeholders.
 class Apigenie < Formula
   desc "Tools for OpenAPI development, with code generators, a mock server and a catalog"
-  homepage "https://apigenie.pl"
+  homepage "https://api-genie.dev"
   # Linux x86_64; the macOS block below overrides it on Apple silicon, and the depends_on lines
   # keep the formula off the systems without a binary (every system needs some url for
   # `brew readall --os=all --arch=all`, and brew style wants url, version, sha256 in this order)
-  url "https://github.com/mykulyak/api-genie/releases/download/cli-0.12.0/apigenie-0.12.0-linux-x64.tar.gz"
-  version "0.12.0"
-  sha256 "8fc69da79c5d6cc4a0ca8401be3003dc9db87826636faa351972a82d35d18845"
-  license "MIT"
+  url "https://github.com/mykulyak/api-genie/releases/download/cli-0.13.0/apigenie-0.13.0-linux-x64.tar.gz"
+  version "0.13.0"
+  sha256 "72a85d57357cfe53ddc0e29319db8b90681b49b8ca1353323c188654c4ffc4e0"
+  license :cannot_represent
 
   on_macos do
     depends_on arch: :arm64
     depends_on macos: :sonoma
 
     on_arm do
-      url "https://github.com/mykulyak/api-genie/releases/download/cli-0.12.0/apigenie-0.12.0-macos-arm64.zip"
-      sha256 "a8bc9a8e365c779e787c20b14a3ea0850408e75c57641d0dfa0ea006e2003b18"
+      url "https://github.com/mykulyak/api-genie/releases/download/cli-0.13.0/apigenie-0.13.0-macos-arm64.zip"
+      sha256 "72d13b0c52c7836800d7a19c1dcf704f72948bdae441c892d16f503470ae7d61"
     end
   end
 
